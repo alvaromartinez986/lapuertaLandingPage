@@ -76,9 +76,8 @@ function App() {
   return (
     <>
       <header
-        className={`header ${isDarkHero ? 'header-on-dark' : 'header-on-light'} ${
-          isScrolled ? 'header-scrolled' : ''
-        }`}
+        className={`header ${isDarkHero ? 'header-on-dark' : 'header-on-light'} ${isScrolled ? 'header-scrolled' : ''
+          }`}
       >
         <div className="container header-container">
           <div
@@ -138,7 +137,7 @@ function App() {
               <p className="hero-desc">
                 Comida fresca, espacios inspiradores y coworking adaptable. ¡La Puerta: donde la pasión se encuentra con la productividad! 🔆
               </p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div className='links-main'>
                 <button
                   onClick={() => navigateTo('menu')}
                   className="btn btn-primary"
