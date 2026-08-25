@@ -8,10 +8,7 @@ import imgDesayuno2 from '../assets/menu/desayuno2.jpg';
 import imgDesayuno3 from '../assets/menu/desayuno3.png';
 import imgDesayunoSandwich from '../assets/menu/desayunoSandwich.jpg';
 import imgDesayunoVarios from '../assets/menu/desayunoVariosPlatos.png';
-import imgDesayunoVarios5 from '../assets/menu/desayunoVarios5.png';
 import imgBowl from '../assets/menu/bowl.png';
-import imgBowl3 from '../assets/menu/bowl3.png';
-import imgBowl5 from '../assets/menu/bowl5.png';
 import imgBowlFrijoles from '../assets/menu/bowlFrijoles.jpg';
 import imgAlmuerzoFrijoles from '../assets/menu/almuerzoFrijoles.png';
 
@@ -20,17 +17,11 @@ import imgCapuchino from '../assets/menu/capuchino.jpg';
 import imgBebidaFresa from '../assets/menu/bebodaFresa.png';
 import imgSmoothieFrutosRojos from '../assets/menu/smoothie-frutos-rojos.png';
 
-// Tardear, Sandwiches, Hamburguesas & Pastas
+// Tardear, Sandwiches, Hamburguesas
 import imgHamburguesa from '../assets/menu/hamburguesa.jpg';
 import imgHamburguesa2 from '../assets/menu/hamburguesa2.jpg';
 import imgHamburguesa2Png from '../assets/menu/hamburguesa2.png';
 import imgSandwich from '../assets/menu/sandwhic.jpg';
-import imgPastaCarbonara from '../assets/menu/pastaCarbonara.png';
-import imgCarbonara3 from '../assets/menu/carbona3.jpg';
-import imgPasta from '../assets/menu/pasta.png';
-import imgPasta3 from '../assets/menu/pasta3.jpg';
-import imgPasta4 from '../assets/menu/pasta4.jpg';
-import imgPastaGenerica3 from '../assets/menu/pastaGenerica3.png';
 import imgPlatosVarios from '../assets/menu/platosVarios.png';
 import imgComboTardear from '../assets/menu/combo-tardear.png';
 
@@ -53,7 +44,6 @@ import imgPastel from '../assets/menu/pastel.jpg';
 import imgCookie from '../assets/menu/cookie.png';
 import imgGalleta from '../assets/menu/galleta.png';
 import imgGalleta3 from '../assets/menu/galleta3.png';
-import imgGalletaKlim from '../assets/menu/galletaKlim.png';
 import imgGalletaRoja from '../assets/menu/galletaRoja.png';
 import imgGalletasVariadas from '../assets/menu/galletasVariadas.png';
 import imgGalletasVariadas2 from '../assets/menu/galletasVariadas2.jpg';
@@ -71,29 +61,26 @@ export const reservationInfo = {
   url: 'https://wa.link/ardql6',
 };
 
+export const carbohidratosDesayuno = [
+  'Arepa',
+  'Pan aliñado',
+  'Pan integral',
+  'Pan Chochita',
+  'Focaccia personal',
+  'Pan Brioche',
+];
+
 export const menuCategories = [
   { id: 'todos', name: 'Todos', icon: '✨', description: 'Nuestra selección gastronómica completa' },
   { id: 'desayunos', name: 'Desayunos', icon: '🍳', description: 'Arma tu desayuno con carbohidrato a elección, huevos al gusto, fruta y bebida' },
-  { id: 'bebidas', name: 'Bebidas', icon: '☕', description: 'Café de especialidad, métodos filtrados, cold brew y malteadas' },
-  { id: 'tardear', name: 'Tardear', icon: '🥪', description: 'Bruschettas artesanales, sándwiches gourmet, hamburguesas y delicias' },
-  { id: 'dulces', name: 'Dulces & Postres', icon: '🧇', description: 'Waffles crocantes, tostadas francesas y momentos dulces' },
+  { id: 'bebidas', name: 'Bebidas', icon: '☕', description: 'Café de especialidad, métodos filtrados, cold brew y bebidas frías' },
+  { id: 'almuerzo', name: 'Almuerzo', icon: '🥗', description: 'Bowl de almuerzo y entradas' },
+  { id: 'tardear', name: 'Tardear', icon: '🥪', description: 'Bruschettas artesanales, montaditos, empanadas y delicias' },
+  { id: 'cenas', name: 'Cenas', icon: '🍔', description: 'Sándwiches gourmet y hamburguesas artesanales con papas' },
+  { id: 'dulces', name: 'Dulces', icon: '🧇', description: 'Waffles crocantes, tostadas francesas y momentos dulces' },
   { id: 'tortas', name: 'Tortas', icon: '🍰', description: 'Porciones individuales frescas horneadas a diario' },
-  { id: 'galletas', name: 'Galletas', icon: '🍪', description: 'Galletas artesanales recién horneadas con centro suave' },
+  { id: 'galletas', name: 'Galletas', icon: '🍪', description: 'Galletas artesanales recién horneadas con centro suave y brownies' },
   { id: 'panaderia', name: 'Panadería', icon: '🥖', description: 'Panes rellenos y masas madre elaboradas artesanalmente' },
-];
-
-export const carbohidratosDesayuno = [
-  'Pan aliñado',
-  'Pan integral',
-  'Arepa',
-  'Focaccia',
-  'Pancakes clásicos',
-  'Pancakes proteicos',
-  'Pancakes de zanahoria',
-  'Waffles clásicos',
-  'Waffles proteicos',
-  'Waffles de pandebono',
-  'Waffles de zanahoria'
 ];
 
 export const featuredHighlights = [
@@ -112,15 +99,15 @@ export const featuredHighlights = [
   },
   {
     id: 'feat-hamburguesa',
-    itemId: 'rollo-hamburguesa',
-    title: 'Rollo Hamburguesa La Puerta',
-    subtitle: 'Carne Jugosa & Pan Artesanal',
+    itemId: 'hamburguesa-valluna',
+    title: 'Hamburguesa Valluna',
+    subtitle: 'Sabor de la Tierra',
     image: imgHamburguesa2Png,
     secondaryImage: imgHamburguesa,
-    badge: '🍔 Favorito de Tardear',
-    price: 20000,
-    category: 'tardear',
-    description: 'Pan rollo de la casa, salsa obsesión, carne jugosa, tocineta crujiente, queso fundido y cebolla morada encurtida.',
+    badge: '🍔 Favorita',
+    price: 30000,
+    category: 'cenas',
+    description: 'Hogao, lechuga, aguacate, chicharrón, carne artesanal, queso, maduro y huevo frito. Incluye papas con salsa roja.',
     tags: ['Hamburguesa', 'Especial', 'Artesanal']
   },
   {
@@ -131,48 +118,48 @@ export const featuredHighlights = [
     image: imgWaffle,
     secondaryImage: imgWaffle2,
     badge: '🧇 Más Pedido',
-    price: 12000,
+    price: 16000,
     category: 'dulces',
-    description: 'Masa de pandebono horneada en waffle maker: crocante por fuera, suave por dentro, bañado con arequipe y mermelada artesanal.',
+    description: 'Masa de pandebono horneada en waffle maker: crocante por fuera, suave por dentro, bañado con mermelada y arequipe.',
     tags: ['Típico Recreado', 'Favorito', 'Arequipe']
   },
   {
     id: 'feat-torta-zanahoria',
-    itemId: 'torta-zanahoria',
-    title: 'Torta Rústica de Zanahoria',
-    subtitle: 'Frosting de Queso Crema & Especias',
+    itemId: 'torta-porciones',
+    title: 'Tortas Artesanales por Porción',
+    subtitle: '11 Sabores Exclusivos',
     image: imgPastelZanahoria,
     secondaryImage: imgTortaZanahoria,
     badge: '🍰 Repostería de Autor',
-    price: 8000,
+    price: 10000,
     category: 'tortas',
-    description: 'Bizcocho ultra húmedo de zanahoria fresca con canela, nueces tostadas y capas generosas de suave crema de queso.',
-    tags: ['Porción Individual', 'Casera', 'Especias']
+    description: 'Zanahoria, Chocolate, Naranja/Amapola, Red Velvet, Blue Velvet, Coco, Café, Limón/Arándanos, Pandebono, Cheesecake o Pie de Manzana.',
+    tags: ['Porción Individual', 'Casera', 'Artesanal']
   },
   {
     id: 'feat-malteada',
     itemId: 'fria-sin-malteada-frutos',
-    title: 'Malteada & Smoothie Frutos Rojos',
+    title: 'Malteada de Frutos Rojos / Amarillos',
     subtitle: 'Refrescancia Cremosa Natural',
     image: imgBebidaFresa,
     secondaryImage: imgSmoothieFrutosRojos,
     badge: '🍓 100% Natural',
-    price: 12000,
+    price: 15000,
     category: 'bebidas',
     description: 'Helado artesanal batido con fresas, moras y frutos del bosque frescos, decorado con fruta natural fresca.',
     tags: ['Frutas Frescas', 'Helado', 'Cremoso']
   },
   {
     id: 'feat-galletas',
-    itemId: 'galleta-clasica',
+    itemId: 'galleta-estandar',
     title: 'Galletas Rústicas Artesanales',
     subtitle: 'Recién Salidas del Horno',
     image: imgGalletasVariadas,
     secondaryImage: imgCookie,
     badge: '🍪 Horneadas a Diario',
-    price: 8000,
+    price: 10000,
     category: 'galletas',
-    description: 'Generosa masa de mantequilla con centro suave, chispas de chocolate belga y frutos secos tostados.',
+    description: 'Generosa masa de mantequilla con centro suave: Clásica, Chocolate, Red Velvet, Mantequilla de Maní, Nucita, Nutella, Leche Klim, Oreo o Masmelo.',
     tags: ['Artesanal', 'Centro Suave', 'Chocolate']
   }
 ];
@@ -180,15 +167,25 @@ export const featuredHighlights = [
 export const menuItems = [
   // --- DESAYUNOS ---
   {
-    id: 'desayuno-dia',
+    id: 'desayuno-arepa-pan',
     category: 'desayunos',
-    name: 'Desayuno del Día Clásico',
-    price: 12000,
-    badge: 'Popular',
+    name: 'Arepa / Pan',
+    price: 15000,
+    badge: 'Clásico',
     image: imgDesayunoHuevos,
     secondaryImage: imgDesayunoCocidos,
-    description: 'Escoges tu carbohidrato preferido, acompañado de huevo al gusto, porción de fruta fresca y bebida caliente (café o chocolate).',
-    tags: ['Completo', 'Económico', 'Tradicional']
+    description: 'Acompañado de huevo al gusto, porción de fruta y bebida café o chocolate.',
+    tags: ['Completo', 'Tradicional']
+  },
+  {
+    id: 'desayuno-rollo-huevo',
+    category: 'desayunos',
+    name: 'Rollo al Huevo',
+    price: 15000,
+    badge: 'Popular',
+    image: imgDesayunoVarios,
+    description: 'Pan rollo a elección, huevos al gusto, queso, porción de fruta y bebida café o chocolate.',
+    tags: ['Pan de Rollo', 'Completo']
   },
   {
     id: 'desayuno-caprese',
@@ -198,127 +195,92 @@ export const menuItems = [
     badge: 'Recomendado',
     image: imgDesayunoCaprese,
     secondaryImage: imgDesayuno3,
-    description: 'Imagina el aroma envolvente de una salsa napolitana casera, huevos al gusto, pesto artesanal, tomate cherry, queso y rúgula fresca.',
-    tags: ['Con carbohidrato a elección', 'Frescura', 'Chef Pick']
+    description: 'Salsa napolitana casera, huevos al gusto, pesto, tomate Cherry, queso, rúgula.',
+    tags: ['Especial', 'Frescura', 'Chef Pick']
   },
   {
     id: 'desayuno-campesino',
     category: 'desayunos',
     name: 'Campesino',
-    price: 18000,
+    price: 20000,
     badge: 'Tradición',
     image: imgDesayunoRanchero,
     secondaryImage: imgDesayuno2,
-    description: 'Con el auténtico sabor del campo: chorizo artesanal, huevo perico, aguacate fresco y queso campesino. Un desayuno que te abraza por dentro.',
-    tags: ['Con carbohidrato a elección', 'Típico', 'Chorizo']
-  },
-  {
-    id: 'desayuno-huerta',
-    category: 'desayunos',
-    name: 'Huerta',
-    price: 18000,
-    badge: 'Saludable',
-    image: imgBowl,
-    secondaryImage: imgBowl3,
-    description: 'Explosión de colores y frescura: ensalada fría, lechuga, rúgula, mango, piña, calabacín, queso campesino y huevos al gusto.',
-    tags: ['Con carbohidrato a elección', 'Ligero', 'Frutas']
-  },
-  {
-    id: 'desayuno-tentativo',
-    category: 'desayunos',
-    name: 'Tentativo',
-    price: 22000,
-    badge: 'Gourmet',
-    image: imgDesayuno3,
-    secondaryImage: imgDesayunoVarios,
-    description: 'Combina lo dulce, lo salado y lo crujiente: queso crema, mermelada de frutos amarillos de la casa, jamón serrano, huevos al gusto y frutos secos.',
-    tags: ['Con carbohidrato a elección', 'Agridulce', 'Premium']
-  },
-  {
-    id: 'desayuno-llanero',
-    category: 'desayunos',
-    name: 'Llanero',
-    price: 20000,
-    badge: 'Contundente',
-    image: imgDesayunoRanchero,
-    description: 'Para quienes no temen disfrutar: chorizo, tocineta crocante, pepperoni, huevos al gusto, chimichurri especial y queso campesino.',
-    tags: ['Con carbohidrato a elección', 'Proteico']
-  },
-  {
-    id: 'desayuno-amanecer',
-    category: 'desayunos',
-    name: 'Amanecer',
-    price: 18000,
-    badge: 'Colorido',
-    image: imgBowl5,
-    secondaryImage: imgDesayunoVarios5,
-    description: 'Queso crema, mermelada de frutos rojos o amarillos, huevos al gusto, fruta variada y frutos secos. Ligero, vibrante y lleno de contrastes.',
-    tags: ['Con carbohidrato a elección', 'Frutas']
-  },
-  {
-    id: 'desayuno-umami',
-    category: 'desayunos',
-    name: 'Umami',
-    price: 20000,
-    badge: 'Favorito',
-    image: imgDesayuno2,
-    description: 'Puré de maduro, tocineta crujiente, huevos al gusto, queso campesino y la exquisita salsa Obsesión de la casa. Un plato que se recuerda y se repite.',
-    tags: ['Con carbohidrato a elección', 'Sabor Único']
+    description: 'Chorizo, madurito, huevo perico, aguacate y queso campesino.',
+    tags: ['Típico', 'Chorizo']
   },
   {
     id: 'desayuno-obsesion',
     category: 'desayunos',
     name: 'Obsesión',
-    price: 22000,
+    price: 24000,
     badge: 'Especialidad',
     image: imgDesayunoSandwich,
-    description: 'Balance perfecto entre frescura y cremosidad: lechuga, aguacate, huevos al gusto, queso, tocineta, salsa obsesión y queso crema.',
-    tags: ['Con carbohidrato a elección', 'Creación de la Casa']
+    description: 'Lechuga, aguacate, huevos al gusto, queso, tocineta, salsa obsesión y queso crema.',
+    tags: ['Creación de la Casa', 'Premium']
+  },
+  {
+    id: 'desayuno-serrano',
+    category: 'desayunos',
+    name: 'Serrano',
+    price: 24000,
+    badge: 'Gourmet',
+    image: imgDesayuno3,
+    secondaryImage: imgDesayunoVarios,
+    description: 'Queso crema, mermelada de frutos amarillos, jamón serrano, huevos al gusto, frutos secos.',
+    tags: ['Agridulce', 'Premium', 'Serrano']
+  },
+  {
+    id: 'desayuno-llanero',
+    category: 'desayunos',
+    name: 'Llanero',
+    price: 24000,
+    badge: 'Contundente',
+    image: imgDesayunoRanchero,
+    description: 'Chorizo, tocineta, pepperoni, huevos al gusto, chimichurri y queso campesino.',
+    tags: ['Proteico', 'Especial']
+  },
+  {
+    id: 'desayuno-umami',
+    category: 'desayunos',
+    name: 'Umami',
+    price: 22000,
+    badge: 'Favorito',
+    image: imgDesayuno2,
+    description: 'Puré de maduro, tocineta, huevos al gusto, queso campesino, salsa obsesión.',
+    tags: ['Sabor Único', 'Especial']
   },
 
-  // --- BEBIDAS (Café Caliente) ---
+  // --- BEBIDAS ---
   {
     id: 'cafe-espresso',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Espresso',
-    price: 3000,
+    price: 4000,
     description: 'Extracción intensa y aromática de café de especialidad seleccionado.',
     tags: ['Café Caliente']
   },
   {
     id: 'cafe-espresso-doble',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Espresso Doble',
-    price: 5000,
+    price: 8000,
     description: 'Doble carga de espresso para máxima energía y cuerpo concentrado.',
     tags: ['Café Caliente']
   },
   {
     id: 'cafe-americano',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Americano',
     price: 6000,
     description: 'Café suave y balanceado a base de espresso y agua caliente.',
     tags: ['Café Caliente']
   },
   {
-    id: 'cafe-americano-irlandes',
-    category: 'bebidas',
-    subCategory: 'Café Caliente',
-    name: 'Americano Irlandés',
-    price: 6000,
-    description: 'Americano con notas irlandesas especiales.',
-    tags: ['Café Caliente', 'Especial']
-  },
-  {
     id: 'cafe-capuccino',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Capuccino',
-    price: 8000,
+    price: 10000,
     image: imgCapuchino,
     description: 'Espresso perfecto con leche vaporizada y sedosa espuma decorada con latte art.',
     tags: ['Café Caliente', 'Clásico', 'Latte Art']
@@ -326,9 +288,8 @@ export const menuItems = [
   {
     id: 'cafe-capuccino-nutella',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Capuccino Nutella',
-    price: 10000,
+    price: 12000,
     badge: 'Dulce',
     image: imgCapuchino,
     description: 'Capuccino cremoso con un toque generoso de Nutella original.',
@@ -337,47 +298,33 @@ export const menuItems = [
   {
     id: 'cafe-capuccino-vainilla',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Capuccino Vainilla',
-    price: 8500,
+    price: 10000,
     description: 'Capuccino aromatizado con esencia sutil de vainilla francesa.',
     tags: ['Café Caliente']
   },
   {
     id: 'cafe-capuchai',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Capuchai',
-    price: 9000,
+    price: 10000,
     description: 'La fusión perfecta de especias chai con el vigor del capuccino.',
     tags: ['Café Caliente', 'Especiado']
   },
   {
     id: 'cafe-capuccino-baileys',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Capuccino Baileys',
-    price: 12000,
+    price: 14000,
     badge: 'Con Licor',
     description: 'Capuccino premium con crema de licor Baileys.',
     tags: ['Café Caliente', 'Licor']
   },
   {
-    id: 'cafe-capuccino-irlandes',
-    category: 'bebidas',
-    subCategory: 'Café Caliente',
-    name: 'Capuccino Irlandés',
-    price: 12000,
-    badge: 'Con Licor',
-    description: 'Capuccino con toque irlandés para ocasiones especiales.',
-    tags: ['Café Caliente', 'Licor']
-  },
-  {
     id: 'cafe-mocaccino',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Mocaccino',
-    price: 9000,
+    price: 12000,
     image: imgCapuchino,
     description: 'Deliciosa armonía entre espresso, leche vaporizada y chocolate.',
     tags: ['Café Caliente', 'Chocolate']
@@ -385,9 +332,8 @@ export const menuItems = [
   {
     id: 'cafe-latte',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Latte',
-    price: 9000,
+    price: 10000,
     image: imgCapuchino,
     description: 'Textura suave y cremosa con predominancia de leche y ligero toque de espresso.',
     tags: ['Café Caliente']
@@ -395,99 +341,80 @@ export const menuItems = [
   {
     id: 'cafe-latte-chai',
     category: 'bebidas',
-    subCategory: 'Café Caliente',
     name: 'Latte Chai',
-    price: 10000,
+    price: 12000,
     description: 'Latte infundido con exquisita mezcla de té chai y especias aromáticas.',
     tags: ['Café Caliente', 'Especiado']
   },
-
-  // --- BEBIDAS (Métodos Filtrados) ---
   {
-    id: 'filtrado-prensa',
+    id: 'cafe-ganocafe',
     category: 'bebidas',
-    subCategory: 'Métodos Filtrados',
-    name: 'Filtrado Prensa Francesa',
-    price: 16000,
-    badge: 'Origen',
-    description: 'Extracción por inmersión que resalta cuerpo, aceites naturales y notas profundas del café.',
-    tags: ['Método de Filtrado', 'Especialidad']
+    name: 'Ganocafé',
+    price: 8000,
+    description: 'Café especial elaborado con extracto de Ganoderma, suave y reconfortante.',
+    tags: ['Café Caliente', 'Especial']
   },
   {
-    id: 'filtrado-v60',
+    id: 'cafe-gano-mocharico',
     category: 'bebidas',
-    subCategory: 'Métodos Filtrados',
-    name: 'Filtrado V60',
-    price: 16000,
-    badge: 'Origen',
-    description: 'Método de goteo de precisión que resalta notas florales, cítricas y dulzura limpia.',
-    tags: ['Método de Filtrado', 'Especialidad']
+    name: 'Gano Mocharico',
+    price: 10000,
+    description: 'Combinación de Ganocafé con chocolate para una experiencia única.',
+    tags: ['Café Caliente', 'Chocolate']
   },
-  {
-    id: 'filtrado-chemex',
-    category: 'bebidas',
-    subCategory: 'Métodos Filtrados',
-    name: 'Filtrado Chemex (Quemex)',
-    price: 16000,
-    badge: 'Origen',
-    description: 'Taza extraordinariamente cristalina y sedosa gracias a su filtro grueso patentado.',
-    tags: ['Método de Filtrado', 'Especialidad']
-  },
-
-  // --- BEBIDAS (Cold Brew) ---
   {
     id: 'cold-brew-clasico',
     category: 'bebidas',
-    subCategory: 'Cold Brew',
     name: 'Cold Brew Clásico',
     price: 8000,
-    description: 'Café infusionado en frío durante horas, suave, naturalmente dulce y baja acidez.',
+    description: 'Café infusionado en frío durante horas, suave, naturalmente dulce y de baja acidez.',
     tags: ['Cold Brew', 'Frío']
   },
   {
     id: 'cold-brew-soda',
     category: 'bebidas',
-    subCategory: 'Cold Brew',
     name: 'Cold Brew con Soda',
-    price: 10000,
+    price: 12000,
     description: 'Refrescante combinación de infusión en frío de café con burbujas de soda efervescente.',
     tags: ['Cold Brew', 'Refrescante']
   },
   {
-    id: 'cold-brew-irlandes',
-    category: 'bebidas',
-    subCategory: 'Cold Brew',
-    name: 'Cold Brew Irlandés',
-    price: 12000,
-    description: 'Cold brew macerado con perfil irlandés aromático y envolvente.',
-    tags: ['Cold Brew', 'Frío']
-  },
-  {
     id: 'cold-brew-naranja',
     category: 'bebidas',
-    subCategory: 'Cold Brew',
     name: 'Cold Brew con Naranja',
-    price: 12000,
+    price: 14000,
     badge: 'Recomendado',
     description: 'Extraordinaria fusión cítrica entre jugo fresco de naranja y extracto frío de café.',
     tags: ['Cold Brew', 'Cítrico']
   },
-
-  // --- BEBIDAS (Calientes Sin Café) ---
   {
     id: 'bebida-chocolate',
     category: 'bebidas',
-    subCategory: 'Calientes Sin Café',
-    name: 'Chocolate Caliente',
-    price: 8000,
+    name: 'Chocolate',
+    price: 10000,
     description: 'Chocolate tradicional espeso y reconfortante preparado con cacao seleccionado.',
+    tags: ['Sin Café', 'Caliente']
+  },
+  {
+    id: 'bebida-gano-chocolate',
+    category: 'bebidas',
+    name: 'Gano Chocolate',
+    price: 10000,
+    description: 'Chocolate enriquecido con extracto de Ganoderma para una bebida nutritiva.',
+    tags: ['Sin Café', 'Especial']
+  },
+  {
+    id: 'bebida-milo',
+    category: 'bebidas',
+    name: 'Milo',
+    price: 8000,
+    description: 'Clásica bebida de malta y chocolate, reconfortante y energizante.',
     tags: ['Sin Café', 'Caliente']
   },
   {
     id: 'bebida-te-chai',
     category: 'bebidas',
-    subCategory: 'Calientes Sin Café',
-    name: 'Té Chai Caliente',
+    name: 'Té Chai',
     price: 8000,
     description: 'Infusión de té negro con canela, cardamomo, clavo, jengibre y leche cremosa.',
     tags: ['Sin Café', 'Especiado']
@@ -495,141 +422,49 @@ export const menuItems = [
   {
     id: 'bebida-choco-chai',
     category: 'bebidas',
-    subCategory: 'Calientes Sin Café',
     name: 'Choco Chai',
-    price: 8000,
+    price: 10000,
     description: 'El encuentro celestial entre chocolate tradicional y mezcla especiada chai.',
     tags: ['Sin Café', 'Dulce']
   },
   {
-    id: 'bebida-chocomasmelo',
-    category: 'bebidas',
-    subCategory: 'Calientes Sin Café',
-    name: 'Chocomasmelo',
-    price: 10000,
-    badge: 'Dulce',
-    description: 'Taza de chocolate caliente coronada con masmelos fundidos.',
-    tags: ['Sin Café', 'Postre']
-  },
-  {
     id: 'bebida-aromatica',
     category: 'bebidas',
-    subCategory: 'Calientes Sin Café',
-    name: 'Aromática Frutos Rojos / Amarillos',
+    name: 'Aromáticas',
     price: 7000,
-    image: imgSmoothieFrutosRojos,
-    description: 'Infusión natural con trozos de fruta macerada fresca (a elección: frutos rojos o amarillos).',
-    tags: ['Sin Café', 'Natural', 'Frutas']
-  },
-
-  // --- BEBIDAS (Malteadas Cookies) ---
-  {
-    id: 'malteada-arequipe',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Clásica con Arequipe',
-    price: 16000,
-    badge: 'Cookie Shake',
-    image: imgBebidaFresa,
-    description: 'Malteada espesa de helado artesanal, galleta y veteado abundante de arequipe.',
-    tags: ['Malteada', 'Cookies']
+    description: 'Infusión natural aromática de hierbas y frutas seleccionadas.',
+    tags: ['Sin Café', 'Natural']
   },
   {
-    id: 'malteada-chocolate',
+    id: 'filtrado',
     category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Chocolate Cookies',
-    price: 16000,
-    badge: 'Cookie Shake',
-    description: 'Intensidad de chocolate, helado cremoso y trozos de galleta artesanal.',
-    tags: ['Malteada', 'Cookies']
+    name: 'Filtrado (Prensa Francesa / V60 / Chemex)',
+    price: 6000,
+    badge: 'Especialidad',
+    description: 'Método de filtrado a elección: Prensa Francesa, V60 o Chemex. Cada uno resalta notas únicas del café.',
+    tags: ['Método de Filtrado', 'Café de Especialidad']
   },
-  {
-    id: 'malteada-red-velvet',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Red Velvet',
-    price: 16000,
-    badge: 'Cookie Shake',
-    image: imgBebidaFresa,
-    description: 'Suave perfil Red Velvet combinado con helado y textura de galleta.',
-    tags: ['Malteada', 'Cookies']
-  },
-  {
-    id: 'malteada-mani-frutos',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Mantequilla de Maní y Frutos Amarillos',
-    price: 16000,
-    badge: 'Favorito',
-    description: 'Combinación irresistible de crema de maní suave con dulce mermelada de frutos amarillos.',
-    tags: ['Malteada', 'Cookies']
-  },
-  {
-    id: 'malteada-nutella',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Nutella',
-    price: 16000,
-    badge: 'Cookie Shake',
-    description: 'Cremosa y chocolatosa con abundante Nutella y tropezones de galleta.',
-    tags: ['Malteada', 'Cookies']
-  },
-  {
-    id: 'malteada-nucita',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Nucita',
-    price: 16000,
-    badge: 'Cookie Shake',
-    description: 'El sabor nostálgico del clásico dulce bicolor en una cremosa malteada.',
-    tags: ['Malteada', 'Cookies']
-  },
-  {
-    id: 'malteada-oreo',
-    category: 'bebidas',
-    subCategory: 'Malteadas Cookies',
-    name: 'Malteada Oreo',
-    price: 16000,
-    badge: 'Cookie Shake',
-    description: 'Auténtica galleta Oreo triturada con base cremosa de vainilla.',
-    tags: ['Malteada', 'Cookies']
-  },
-
-  // --- BEBIDAS (Frías Con Café) ---
   {
     id: 'fria-cafe-americano',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Americano Frío (Iced Americano)',
-    price: 8000,
-    description: 'Espresso doble servido sobre hielo cristalino para un refresque revitalizante.',
+    name: 'Americano Frío',
+    price: 10000,
+    description: 'Espresso servido sobre hielo cristalino para un refresco revitalizante.',
     tags: ['Frío', 'Café']
   },
   {
     id: 'fria-cafe-latte',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Iced Latte',
-    price: 10000,
+    name: 'Latte Frío',
+    price: 12000,
     description: 'Leche fría, hielo y shot de espresso fresco en perfecto degradé visual.',
     tags: ['Frío', 'Café']
   },
   {
-    id: 'fria-cafe-dalgona',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Café Dalgona',
-    price: 8000,
-    description: 'Espuma batida sedosa de café coronando una base de leche bien fría.',
-    tags: ['Frío', 'Especial']
-  },
-  {
     id: 'fria-cafe-affogato',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
     name: 'Affogato',
-    price: 8000,
+    price: 12000,
     badge: 'Delicioso',
     description: 'Bola de helado de vainilla ahogada al instante en un espresso recién extraído.',
     tags: ['Postre / Café', 'Italiano']
@@ -637,120 +472,74 @@ export const menuItems = [
   {
     id: 'fria-cafe-frappe-clasico',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Frappé Clásico',
-    price: 12000,
+    name: 'Frappe Clásico',
+    price: 14000,
     description: 'Café frappé granizado con leche y toque dulce balanceado.',
     tags: ['Frappé', 'Café']
   },
   {
-    id: 'fria-cafe-frappe-choco',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Frappé con Chocolate',
-    price: 14000,
-    description: 'Frappé de café combinado con salsa de chocolate fundido.',
-    tags: ['Frappé', 'Chocolate']
-  },
-  {
     id: 'fria-cafe-frappe-chai',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Frappé Chai',
+    name: 'Frappe Chai',
     price: 14000,
     description: 'Frappé con armoniosa infusión de especias chai y café.',
     tags: ['Frappé', 'Especias']
   },
   {
-    id: 'fria-cafe-frappe-caramelo',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Frappé con Caramelo',
-    price: 14000,
-    description: 'Frappé endulzado y decorado con generoso sirope de caramelo.',
-    tags: ['Frappé', 'Caramelo']
-  },
-  {
     id: 'fria-cafe-frappe-baileys',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Frappé con Baileys',
+    name: 'Frappe con Baileys',
     price: 15000,
     badge: 'Con Licor',
     description: 'Frappé especial con crema irlandesa Baileys para una experiencia sublime.',
     tags: ['Frappé', 'Licor']
   },
   {
-    id: 'fria-cafe-tonic-espresso',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Tonic Espresso',
-    price: 8000,
-    description: 'Burbujas de agua tónica fría con un shot de espresso encima. Refrescancia sofisticada.',
-    tags: ['Café Frío', 'Burbujas']
-  },
-  {
     id: 'fria-cafe-naranja',
     category: 'bebidas',
-    subCategory: 'Frías Con Café',
     name: 'Café Naranja',
-    price: 10000,
+    price: 12000,
     description: 'Zumo fresco de naranja con extracción de café espresso sobre hielo.',
     tags: ['Café Frío', 'Cítrico']
   },
   {
-    id: 'fria-cafe-soda',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Soda de Café con Frutos Rojos / Amarillos',
-    price: 12000,
-    description: 'Soda artesanal saborizada con fruta natural y toque de café frío.',
-    tags: ['Café Frío', 'Frutas']
-  },
-  {
-    id: 'fria-cafe-latte-frutos',
-    category: 'bebidas',
-    subCategory: 'Frías Con Café',
-    name: 'Latte Frutos Rojos / Amarillos',
-    price: 14000,
-    description: 'Iced latte con reducción artesanal de frutos frescos.',
-    tags: ['Café Frío', 'Frutas']
-  },
-
-  // --- BEBIDAS (Frías Sin Café & Licores) ---
-  {
     id: 'fria-sin-te-chai',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Té Chai Frío',
-    price: 8000,
+    price: 10000,
     description: 'Té especiado chai servido sobre hielo con leche fría.',
     tags: ['Sin Café', 'Frío']
   },
   {
-    id: 'fria-sin-granizado-choco',
+    id: 'fria-sin-milo',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
-    name: 'Granizado de Chocolate',
-    price: 12000,
-    description: 'Hielo finamente triturado con intenso sabor a chocolate.',
+    name: 'Milo Frío',
+    price: 10000,
+    description: 'Bebida de malta Milo servida fría y refrescante.',
+    tags: ['Sin Café', 'Frío']
+  },
+  {
+    id: 'fria-sin-granizado-milo',
+    category: 'bebidas',
+    name: 'Granizado de Milo',
+    price: 14000,
+    badge: 'Refrescante',
+    description: 'Hielo finamente triturado con intenso sabor a Milo.',
     tags: ['Sin Café', 'Granizado']
   },
   {
     id: 'fria-sin-granizado-chai',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Granizado de Té Chai',
-    price: 12000,
+    price: 14000,
     description: 'Granizado refrescante cargado con los aromas de especias chai.',
     tags: ['Sin Café', 'Granizado']
   },
   {
     id: 'fria-sin-soda-frutos',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Soda de Frutos Rojos / Amarillos',
-    price: 10000,
+    price: 12000,
     image: imgSmoothieFrutosRojos,
     description: 'Soda refrescante con pulpa y trozos de frutos macerados.',
     tags: ['Sin Café', 'Soda']
@@ -758,328 +547,310 @@ export const menuItems = [
   {
     id: 'fria-sin-malteada-frutos',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Malteada de Frutos Rojos / Amarillos',
-    price: 12000,
+    price: 15000,
     badge: 'Favorita',
     image: imgBebidaFresa,
     secondaryImage: imgSmoothieFrutosRojos,
-    description: 'Malteada cremosa de fruta natural a base de helado y fresas maceradas.',
+    description: 'Malteada cremosa de fruta natural a base de helado y frutos macerados.',
     tags: ['Sin Café', 'Malteada', 'Fruta Fresca']
   },
   {
     id: 'fria-sin-jugo-agua',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Jugos Naturales en Agua',
-    price: 6000,
+    price: 8000,
     description: 'Frutas frescas de temporada licuadas al momento en agua pura.',
     tags: ['Sin Café', 'Natural']
   },
   {
+    id: 'fria-sin-granizado-frutas',
+    category: 'bebidas',
+    name: 'Granizado de Frutas',
+    price: 14000,
+    description: 'Granizado preparado con frutas naturales de temporada.',
+    tags: ['Sin Café', 'Granizado']
+  },
+  {
     id: 'fria-sin-jugo-leche',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Jugos Naturales en Leche',
-    price: 8000,
+    price: 10000,
     description: 'Frutas frescas batidas con leche cremosa.',
     tags: ['Sin Café', 'Natural']
   },
   {
+    id: 'fria-sin-batidos',
+    category: 'bebidas',
+    name: 'Batidos Naturales',
+    price: 14000,
+    description: 'Batidos preparados con frutas naturales y leche o yogurt.',
+    tags: ['Sin Café', 'Natural', 'Saludable']
+  },
+  {
     id: 'fria-sin-gaseosas',
     category: 'bebidas',
-    subCategory: 'Frías Sin Café',
     name: 'Gaseosas',
-    price: 5000,
+    price: 6000,
     description: 'Variedad de bebidas gaseosas frías en presentación personal.',
     tags: ['Bebida']
   },
   {
-    id: 'licor-temporada',
+    id: 'fria-sin-soda-bretana',
     category: 'bebidas',
-    subCategory: 'Licores',
-    name: 'Licores de Temporada (Vinos, Cervezas, Baileys, Whiskey)',
-    price: null,
-    priceLabel: 'Preguntar por disponibilidad',
-    badge: 'Temporada',
-    description: 'Selección de vinos por copa/botella, cervezas artesanales y nacionales, Baileys y whiskey para acompañar tu tardeo.',
-    tags: ['Licores', 'Bar']
+    name: 'Soda Bretaña',
+    price: 4000,
+    description: 'Agua con gas natural refrescante.',
+    tags: ['Sin Café', 'Soda']
+  },
+  {
+    id: 'fria-sin-michelado',
+    category: 'bebidas',
+    name: 'Michelado',
+    price: 6000,
+    description: 'Cerveza preparada al estilo michelada con limón y sal/especias.',
+    tags: ['Refrescante']
+  },
+  {
+    id: 'bebida-scoop-proteina',
+    category: 'bebidas',
+    name: 'Scoop de Proteína',
+    price: 5000,
+    description: 'Agrega un scoop de proteína a tu bebida favorita.',
+    tags: ['Adicional', 'Saludable']
   },
 
-  // --- TARDEAR (Bruschettas & Pastas) ---
+  // --- ALMUERZO ---
+  {
+    id: 'almuerzo-bowl',
+    category: 'almuerzo',
+    name: 'Almuerzo Bowl (Escoge 3 opciones por categoría: Carbohidratos, Proteínas, Salsas, Acompañamientos, Ensaladas, Bebidas)',
+    price: 16000,
+    badge: 'Completo',
+    image: imgBowl,
+    secondaryImage: imgBowlFrijoles,
+    description: 'Personaliza tu almuerzo seleccionando 3 opciones por categoría: Carbohidratos, Proteínas, Salsas, Acompañamientos, Ensaladas y Bebidas.',
+    tags: ['Personalizable', 'Completo', 'Bowl']
+  },
+  {
+    id: 'almuerzo-entradas',
+    category: 'almuerzo',
+    name: 'Entradas (Solo Martes y Viernes)',
+    price: 6000,
+    badge: 'Mar y Vie',
+    image: imgAlmuerzoFrijoles,
+    description: 'Disponibles exclusivamente los días Martes y Viernes. Pregunta por la entrada del día.',
+    tags: ['Solo Mar y Vie', 'Entrada']
+  },
+
+  // --- TARDEAR ---
   {
     id: 'bruschettas-mix',
     category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Trío de Bruschettas Artesanales (3 unds)',
-    price: 12000,
+    name: 'Bruschetta (3 unds: Caprese / Campesina / Tentativa / Roja / Umami / Valluna)',
+    price: 15000,
     badge: '3 Unidades',
     image: imgPlatosVarios,
     secondaryImage: imgComboTardear,
-    description: 'Base de pan de corteza ciabatta crujiente recién tostado. Elige tus 3 sabores favoritos entre Caprese, Campesina, Tentativa, Roja, Umami o Valluna.',
+    description: 'Base de pan de corteza / ciabatta. Sabores: Caprese, Campesina, Tentativa, Roja, Umami o Valluna.',
     tags: ['Para Compartir', 'Ciabatta']
   },
   {
-    id: 'bruschetta-caprese',
+    id: 'montadito',
     category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Caprese',
-    price: 12000,
-    image: imgDesayunoCaprese,
-    description: 'Salsa napolitana casera, tomate cherry, pesto artesanal, queso parmesano y albahaca fresca sobre ciabatta.',
-    tags: ['Bruschetta', 'Caprese']
-  },
-  {
-    id: 'bruschetta-campesina',
-    category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Campesina',
-    price: 12000,
-    image: imgPlatosVarios,
-    description: 'Chimichurri de la casa, trozos de chorizo doradito y queso campesino fundido.',
-    tags: ['Bruschetta']
-  },
-  {
-    id: 'bruschetta-tentativa',
-    category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Tentativa',
-    price: 12000,
+    name: 'Montadito (Campesino / Caprese / Pepperoni Fiesta / Dulce)',
+    price: 16000,
+    badge: 'A Elección',
     image: imgComboTardear,
-    description: 'Queso crema untuoso, jamón serrano, durazno dulce, frutos secos tostados y un toque de miel pura.',
-    tags: ['Bruschetta', 'Agridulce']
+    description: 'Elige tu montadito preferido: Campesino, Caprese, Pepperoni Fiesta o Dulce.',
+    tags: ['Montadito', 'Tardear']
   },
   {
-    id: 'bruschetta-roja',
+    id: 'empanadas-venezolanas',
     category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Roja',
+    name: 'Empanadas Venezolanas (Trío: carne/queso, pollo/queso, queso)',
     price: 12000,
-    description: 'Queso crema suave, pimentón dulce confitado y hojas de rúgula fresca.',
-    tags: ['Bruschetta']
+    badge: 'Trío',
+    image: imgPlatosVarios,
+    description: 'Trío de empanadas venezolanas: carne con queso, pollo con queso y queso.',
+    tags: ['Empanadas', 'Para Compartir']
   },
   {
-    id: 'bruschetta-umami',
+    id: 'juan-valerios',
     category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Umami',
+    name: 'Juan Valerios (Masa de maduro con chicharrón, relleno de queso, salsa roja)',
     price: 12000,
-    description: 'Puré de plátano maduro meloso, tocineta crujiente y queso campesino.',
-    tags: ['Bruschetta']
+    badge: 'Exclusivo',
+    image: imgPlatosVarios,
+    description: 'Masa de plátano maduro con chicharrón crocante, corazón relleno de queso fundido y salsa roja.',
+    tags: ['Maduro', 'Chicharrón', 'Plato Estrella']
   },
   {
-    id: 'bruschetta-valluna',
+    id: 'lomo-salteado',
     category: 'tardear',
-    subCategory: 'Bruschettas',
-    name: 'Bruschetta Valluna',
-    price: 12000,
-    description: 'Carne o pollo desmechado bañado en salsa hogao tradicional, maduritos y queso campesino.',
-    tags: ['Bruschetta']
+    name: 'Lomo Salteado (Salsa agridulce, verduras, acompañado de arepa)',
+    price: 28000,
+    badge: 'Recomendado',
+    image: imgDesayunoVarios,
+    description: 'Tiras de lomo en salsa agridulce con verduras salteadas, acompañado de arepa.',
+    tags: ['Lomo', 'Salteado']
+  },
+  {
+    id: 'ceviche-chicharron',
+    category: 'tardear',
+    name: 'Ceviche de Chicharrón',
+    price: 25000,
+    badge: 'Imperdible',
+    image: imgPlatosVarios,
+    description: 'Crujientes trozos de chicharrón artesanal marinados en fresca mezcla cítrica con cebolla morada, limón y cilantro.',
+    tags: ['Ceviche', 'Chicharrón', 'Cítrico']
   },
 
-  // --- TARDEAR (Sandwiches & Hamburguesa) ---
-  {
-    id: 'rollo-hamburguesa',
-    category: 'tardear',
-    subCategory: 'Sandwiches & Hamburguesas',
-    name: 'Rollo Hamburguesa La Puerta',
-    price: 20000,
-    badge: 'Especial de la Casa',
-    image: imgHamburguesa2Png,
-    secondaryImage: imgHamburguesa2,
-    description: 'Pan rollo a elección, salsa obsesión de la casa, lechuga fresca, tomate, tocineta crocante, carne jugosa seleccionada, queso y cebolla encurtida morada.',
-    tags: ['Hamburguesa', 'Pan de Rollo', 'Favorito']
-  },
+  // --- CENAS ---
   {
     id: 'sandwich-carne',
-    category: 'tardear',
-    subCategory: 'Sandwiches & Hamburguesas',
+    category: 'cenas',
     name: 'Sandwich de Carne',
-    price: 20000,
+    price: 22000,
     image: imgSandwich,
-    description: 'Pan aliñado o pan rollo, lechuga, salsa napolitana, tomate, pesto, queso derretido y tierna carne desmechada.',
+    description: 'Pan aliñado/rollo, lechuga, salsa napolitana, tomate, pesto, queso, carne desmechada.',
     tags: ['Sandwich Gourmet']
   },
   {
     id: 'sandwich-pollo',
-    category: 'tardear',
-    subCategory: 'Sandwiches & Hamburguesas',
+    category: 'cenas',
     name: 'Sandwich de Pollo',
-    price: 20000,
+    price: 22000,
     image: imgSandwich,
-    description: 'Pan aliñado o pan rollo, lechuga, tomate, queso crema, pepperoni, queso derretido, pollo desmechado jugoso y salsa napolitana.',
+    description: 'Pan aliñado/rollo, lechuga, tomate, queso crema, pepperoni, queso, pollo crunch, salsa napolitana.',
     tags: ['Sandwich Gourmet']
   },
   {
     id: 'sandwich-cosecha',
-    category: 'tardear',
-    subCategory: 'Sandwiches & Hamburguesas',
+    category: 'cenas',
     name: 'Sandwich Cosecha',
-    price: 20000,
+    price: 24000,
     badge: 'Gourmet',
     image: imgDesayunoSandwich,
-    description: 'Pan focaccia artesanal, queso crema, lechuga, rúgula, jamón serrano premium, pepperoni, queso búfala, tomate cherry y aceitunas negras.',
+    description: 'Pan focaccia, queso crema, lechuga, rúgula, jamón serrano, pepperoni, queso búfala y tomate cherry.',
     tags: ['Focaccia', 'Serrano', 'Búfala']
   },
   {
     id: 'sandwich-choripan',
-    category: 'tardear',
-    subCategory: 'Sandwiches & Hamburguesas',
-    name: 'Choripán La Puerta',
-    price: 20000,
-    image: imgSandwich,
-    description: 'Pan aliñado o pan rollo, chimichurri casero, chorizo parrillero, lechuga, tomate, cebolla encurtida, maduritos y queso.',
-    tags: ['Choripán', 'Tardear']
-  },
-
-  // --- TARDEAR (Pastas & Delicias a Otro Nivel) ---
-  {
-    id: 'pasta-carbonara',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Pasta Carbonara Artesanal',
+    category: 'cenas',
+    name: 'Choripan',
     price: 24000,
-    badge: 'Especialidad',
-    image: imgPastaCarbonara,
-    secondaryImage: imgCarbonara3,
-    description: 'Pasta fresca al dente en salsa carbonara clásica con tocineta crocante dorada, queso parmesano curado y pimienta negra recién molida.',
-    tags: ['Pasta Fresca', 'Carbonara', 'Italiano']
+    image: imgSandwich,
+    description: 'Pan rollo a elección, chimichurri, chorizo, lechuga, tomate, cebolla encurtida, maduritos y queso.',
+    tags: ['Choripán']
   },
   {
-    id: 'pasta-napolitana',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Pasta Pomodoro & Pesto',
-    price: 22000,
-    image: imgPasta,
-    secondaryImage: imgPasta3,
-    description: 'Pasta bañada en reducción lenta de tomates frescos con aceite de oliva extra virgen, albahaca y gotas de pesto artesanal.',
-    tags: ['Pasta Fresca', 'Vegetariano', 'Pesto']
+    id: 'hamburguesa-caprese',
+    category: 'cenas',
+    name: 'Hamburguesa Caprese (Incluye papas con salsa roja)',
+    price: 28000,
+    image: imgHamburguesa2Png,
+    secondaryImage: imgHamburguesa,
+    description: 'Salsa napolitana, rúgula, tomate cherry, jamón serrano, carne artesanal, queso búfala, pesto y parmesano. Incluye papas con salsa roja.',
+    tags: ['Hamburguesa', 'Caprese', 'Artesanal']
   },
   {
-    id: 'delicia-bowl-frijoles',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Cazuela / Bowl Campesino',
-    price: 22000,
-    badge: 'Tradicional',
-    image: imgBowlFrijoles,
-    secondaryImage: imgAlmuerzoFrijoles,
-    description: 'Generosa cazuela campesina con frijoles sazonados, plátano maduro en cubos, chicharrón crocante, aguacate y arepita.',
-    tags: ['Típico', 'Contundente', 'Tradición']
-  },
-  {
-    id: 'delicia-juan-valerios',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Juan Valerios',
-    price: 12000,
-    badge: 'Exclusivo',
-    image: imgPlatosVarios,
-    description: 'Masa de plátano maduro con chicharrón crocante, corazón relleno de queso fundido, acompañado con salsa chimichurri.',
-    tags: ['Maduro', 'Chicharrón', 'Plato Estrella']
-  },
-  {
-    id: 'delicia-ceviche-chicharron',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Ceviche de Chicharrón',
-    price: 20000,
-    badge: 'Imperdible',
-    image: imgPlatosVarios,
-    description: 'Crujientes trozos de chicharrón artesanal marinados en una fresca mezcla cítrica con cebolla morada, limón, cilantro y el toque secreto de la casa.',
-    tags: ['Ceviche', 'Chicharrón', 'Cítrico']
-  },
-  {
-    id: 'delicia-lomo-cafe',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Lomo de Café',
+    id: 'hamburguesa-valluna',
+    category: 'cenas',
+    name: 'Hamburguesa Valluna (Incluye papas con salsa roja)',
     price: 30000,
-    badge: 'Plato Fuerte',
-    image: imgPasta4,
-    description: 'Puré de papa suave, corte de lomo tierno sellado al término, bañado en reducción de salsa de café, espárragos salteados y chips crocantes de plátano.',
-    tags: ['Cena / Tardear', 'Lomo', 'Café']
+    badge: 'Favorita',
+    image: imgHamburguesa2Png,
+    secondaryImage: imgHamburguesa2,
+    description: 'Hogao, lechuga, aguacate, chicharrón, carne artesanal, queso, maduro y huevo frito. Incluye papas con salsa roja.',
+    tags: ['Hamburguesa', 'Típico', 'Artesanal']
   },
   {
-    id: 'delicia-lomo-salteado',
-    category: 'tardear',
-    subCategory: 'Pastas & Platos Fuertes',
-    name: 'Lomo Salteado',
+    id: 'hamburguesa-hogarena',
+    category: 'cenas',
+    name: 'Hamburguesa Hogareña (Incluye papas con salsa roja)',
     price: 25000,
-    badge: 'Recomendado',
-    image: imgPastaGenerica3,
-    description: 'Tiras de lomo salteado al wok en salsa agridulce con cebolla morada, pimentón, calabacín tierno, acompañado de arepa tostada.',
-    tags: ['Lomo', 'Salteado']
+    image: imgHamburguesa2Png,
+    description: 'Salsa obsesión, lechuga, tomate, tocineta, carne artesanal, queso y cebolla encurtida. Incluye papas con salsa roja.',
+    tags: ['Hamburguesa', 'Clásica']
+  },
+  {
+    id: 'hamburguesa-5-quesos',
+    category: 'cenas',
+    name: 'Hamburguesa 5 Quesos (Incluye papas con salsa roja)',
+    price: 30000,
+    badge: 'Especial',
+    image: imgHamburguesa2Png,
+    description: 'Queso crema, tocineta, carne artesanal, queso campesino, queso búfala, salsa obsesión y parmesano. Incluye papas con salsa roja.',
+    tags: ['Hamburguesa', 'Quesos', 'Gourmet']
+  },
+  {
+    id: 'hamburguesa-pollo-cesar',
+    category: 'cenas',
+    name: 'Hamburguesa Pollo César (Incluye papas con salsa roja)',
+    price: 25000,
+    image: imgHamburguesa2Png,
+    description: 'Lechuga césar, pollo crunch, salsa intensa, queso, pimentón dulce, pepinillos. Incluye papas con salsa roja.',
+    tags: ['Hamburguesa', 'Pollo', 'César']
   },
 
-  // --- DULCES & POSTRES ---
+  // --- DULCES ---
   {
     id: 'dulce-sweet-waffle',
     category: 'dulces',
-    name: 'Sweet Waffle Clásico',
-    price: 12000,
+    name: 'Sweet Waffle',
+    price: 18000,
     badge: 'Delicioso',
     image: imgWaffle2,
     secondaryImage: imgWaffles3,
-    description: 'Waffle dorado y crujiente cubierto con chocolate fundido, mermelada artesanal y bola de helado cremoso.',
-    tags: ['Waffle', 'Helado', 'Dulce']
+    description: 'Waffle dorado y crujiente con toppings dulces a elección.',
+    tags: ['Waffle', 'Dulce']
   },
   {
     id: 'dulce-brownie-helado',
     category: 'dulces',
-    name: 'Brownie / Galleta con Helado',
-    price: 10000,
+    name: 'Brownie / Galleta con helado o yogurt griego',
+    price: 15000,
     image: imgCookie,
-    description: 'Brownie húmedo de chocolate o galleta recién horneada tibia servida con helado de vainilla.',
+    description: 'Brownie húmedo de chocolate o galleta recién horneada servida con helado o yogurt griego.',
     tags: ['Brownie', 'Helado']
   },
   {
     id: 'dulce-waffle-pandebono',
     category: 'dulces',
-    name: 'Waffle de Pandebono con Arequipe',
-    price: 12000,
+    name: 'Waffle de pandebono con mermelada y arequipe',
+    price: 16000,
     badge: 'Típico Recreado',
     image: imgWaffle,
     secondaryImage: imgWaffle2,
-    description: 'Waffle elaborado con masa de pandebono crocante por fuera y suave por dentro, bañado con mermelada y arequipe.',
+    description: 'Waffle elaborado con masa de pandebono, crocante por fuera y suave por dentro, con mermelada y arequipe.',
     tags: ['Pandebono', 'Arequipe', 'Especial']
   },
   {
     id: 'dulce-nevado',
     category: 'dulces',
-    name: 'Nevado de Frutos Rojos / Amarillos',
-    price: 14000,
+    name: 'Nevado de frutos rojos / amarillos',
+    price: 18000,
     badge: 'Refrescante',
     image: imgBebidaFresa,
     secondaryImage: imgSmoothieFrutosRojos,
-    description: 'Generosas capas de fruta fresca, crema dulce suave, lluvia de queso rallado y helado cremoso.',
+    description: 'Generosas capas de fruta fresca, crema dulce suave y helado cremoso.',
     tags: ['Copas', 'Frutas']
   },
   {
     id: 'dulce-tostadas-clasicas',
     category: 'dulces',
     name: 'Tostadas Francesas Clásicas',
-    price: 10000,
+    price: 15000,
     image: imgWaffles3,
     description: 'Pan brioche bañado en mezcla de vainilla y canela, dorado a la mantequilla con miel y fruta.',
     tags: ['French Toast']
   },
   {
-    id: 'dulce-tostadas-creme-brulee',
-    category: 'dulces',
-    name: 'Tostadas Francesas Crème Brûlée',
-    price: 12000,
-    badge: 'Gourmet',
-    image: imgWaffles3,
-    description: 'Tostadas francesas coronadas con crema sedosa y una crujiente capa de azúcar caramelizada al fuego.',
-    tags: ['French Toast', 'Crème Brûlée']
-  },
-  {
     id: 'dulce-tostadas-tiramisu',
     category: 'dulces',
     name: 'Tostadas Francesas Tiramisú',
-    price: 14000,
+    price: 18000,
     badge: 'Favorito',
     image: imgPastelCafe,
     description: 'Tostadas francesas infusionadas con café espresso, crema mascarpone y cacao en polvo.',
@@ -1088,8 +859,8 @@ export const menuItems = [
   {
     id: 'dulce-torta-temporada',
     category: 'dulces',
-    name: 'Porción Torta de Temporada',
-    price: 8000,
+    name: 'Torta de temporada',
+    price: 10000,
     image: imgPastel,
     description: 'Pregunta por la creación pastelera del día preparada por nuestros reposteros.',
     tags: ['Torta', 'Repostería']
@@ -1097,211 +868,103 @@ export const menuItems = [
   {
     id: 'dulce-migao',
     category: 'dulces',
-    name: 'Migao Tradicional La Puerta',
-    price: 15000,
+    name: 'Migao',
+    price: 16000,
     badge: 'Experiencia',
     description: 'Tazón caliente con chocolate artesanal, pan, waffle de pandebono, grissinis crujientes, galleta y queso campesino derretido.',
     tags: ['Tradicional', 'Chocolate', 'Queso']
   },
   {
-    id: 'dulce-cuchariable',
+    id: 'dulce-brownie-saludable',
     category: 'dulces',
-    name: 'Cuchariable (Torta en Vaso)',
-    price: 15000,
-    badge: 'Postre en Vaso',
-    image: imgPastelFrutosRojos,
-    description: 'Capas de bizcocho húmedo, rellenos cremosos y toppings para disfrutar a cucharadas.',
-    tags: ['En Vaso', 'Pastelería']
+    name: 'Brownie saludable',
+    price: 8000,
+    image: imgCookie,
+    description: 'Brownie elaborado con ingredientes saludables, sin azúcar refinada.',
+    tags: ['Saludable', 'Sin Azúcar']
+  },
+  {
+    id: 'dulce-galleta-almendras',
+    category: 'dulces',
+    name: 'Galleta de almendras saludable',
+    price: 6000,
+    image: imgGalleta,
+    description: 'Galleta artesanal a base de almendras, sin harinas refinadas.',
+    tags: ['Saludable', 'Almendras']
+  },
+  {
+    id: 'dulce-parfait',
+    category: 'dulces',
+    name: 'Parfait',
+    price: 16000,
+    badge: 'Delicioso',
+    image: imgBebidaFresa,
+    description: 'Capas de yogurt griego, granola crocante y frutas frescas de temporada.',
+    tags: ['Saludable', 'Frutas', 'Yogurt']
   },
 
   // --- TORTAS ---
   {
-    id: 'torta-zanahoria',
+    id: 'torta-porciones',
     category: 'tortas',
-    name: 'Torta de Zanahoria',
-    price: 8000,
-    badge: 'Favorita',
+    name: 'Torta (Zanahoria, Chocolate, Naranja/Amapola, Red Velvet, Blue Velvet, Coco, Café, Limón/Arándanos, Pandebono, Cheesecake, Pie de Manzana)',
+    price: 10000,
+    badge: '11 Sabores',
     image: imgPastelZanahoria,
-    secondaryImage: imgTortaZanahoria,
-    description: 'Bizcocho esponjoso y húmedo de zanahoria con nueces tostadas, canela y suave frosting de queso crema.',
-    tags: ['Porción Individual', 'Zanahoria', 'Queso Crema']
-  },
-  {
-    id: 'torta-chocolate',
-    category: 'tortas',
-    name: 'Torta de Chocolate',
-    price: 8000,
-    image: imgPastelCafe,
-    description: 'Intensidad de cacao puro en capas suaves con ganache sedoso de chocolate.',
-    tags: ['Porción Individual', 'Chocolate']
-  },
-  {
-    id: 'torta-naranja-amapola',
-    category: 'tortas',
-    name: 'Torta de Naranja y Semillas de Amapola',
-    price: 8000,
-    image: imgPastel,
-    description: 'Sabor cítrico refrescante de naranja natural complementado con el crujido de la amapola.',
-    tags: ['Porción Individual', 'Cítrico']
-  },
-  {
-    id: 'torta-red-velvet',
-    category: 'tortas',
-    name: 'Torta Red Velvet',
-    price: 8000,
-    badge: 'Clásico',
-    image: imgPastelRedVelvet,
-    secondaryImage: imgPastelRedVelvet2,
-    description: 'El clásico terciopelo rojo con un delicado toque de cacao y capas de crema de queso.',
-    tags: ['Porción Individual', 'Red Velvet']
-  },
-  {
-    id: 'torta-blue-velvet',
-    category: 'tortas',
-    name: 'Torta Blue Velvet',
-    price: 8000,
-    image: imgPastelRedVelvet2,
-    description: 'Innovadora versión terciopelo azul con notas avainilladas y suave cobertura.',
-    tags: ['Porción Individual']
-  },
-  {
-    id: 'torta-coco',
-    category: 'tortas',
-    name: 'Torta de Coco',
-    price: 8000,
-    image: imgPastel,
-    description: 'Esponjosa y perfumada con coco rallado natural y crema ligera.',
-    tags: ['Porción Individual', 'Coco']
-  },
-  {
-    id: 'torta-cafe',
-    category: 'tortas',
-    name: 'Torta de Café',
-    price: 8000,
-    badge: 'De la Casa',
-    image: imgPastelCafe,
-    description: 'Bizcocho humedecido con extracto de café de especialidad y crema suave.',
-    tags: ['Porción Individual', 'Café de Especialidad']
-  },
-  {
-    id: 'torta-limon-arandanos',
-    category: 'tortas',
-    name: 'Torta de Limón y Arándanos',
-    price: 8000,
-    image: imgPastelFresa,
-    description: 'Balance cítrico de limón fresco con arándanos enteros jugosos horneados.',
-    tags: ['Porción Individual', 'Frutas']
-  },
-  {
-    id: 'torta-pandebono',
-    category: 'tortas',
-    name: 'Torta de Pandebono',
-    price: 8000,
-    image: imgPastel,
-    description: 'Torta suave con todo el sabor quesudo y característico del pandebono.',
-    tags: ['Porción Individual', 'Típico']
-  },
-  {
-    id: 'torta-cheesecake',
-    category: 'tortas',
-    name: 'Cheesecake Frutos Rojos',
-    price: 8000,
-    badge: 'Recomendado',
-    image: imgPastelFrutosRojos,
-    secondaryImage: imgPastelFresa,
-    description: 'Cremoso pastel de queso al estilo tradicional sobre base crocante de galleta y coulis de frutos rojos.',
-    tags: ['Porción Individual', 'Cheesecake']
+    secondaryImage: imgPastelRedVelvet,
+    description: 'Porción individual fresca horneada a diario. Sabores disponibles: Zanahoria, Chocolate, Naranja/Amapola, Red Velvet, Blue Velvet, Coco, Café, Limón/Arándanos, Pandebono, Cheesecake y Pie de Manzana.',
+    tags: ['Porción Individual', 'Artesanal', 'Repostería']
   },
 
   // --- GALLETAS ---
   {
-    id: 'galleta-clasica',
+    id: 'galleta-estandar',
     category: 'galletas',
-    name: 'Galleta Clásica Artesanal',
-    price: 8000,
-    badge: 'Favorita',
-    image: imgGalleta,
+    name: 'Galleta (Clásica, Chocolate, Red Velvet, Mantequilla de Maní, Nucita, Nutella, Leche Klim, Oreo, Masmelo)',
+    price: 10000,
+    badge: '9 Sabores',
+    image: imgGalletasVariadas,
     secondaryImage: imgCookie,
-    description: 'Masa tradicional dorada con chips de chocolate, trozos de frutos secos y centro suave recién salido del horno.',
-    tags: ['Galleta Artesanal', 'Recién Horneada', 'Chips Chocolate']
+    description: 'Galletas artesanales recién horneadas con centro suave. Sabores: Clásica, Chocolate, Red Velvet, Mantequilla de Maní, Nucita, Nutella, Leche Klim, Oreo y Masmelo.',
+    tags: ['Galleta Artesanal', 'Recién Horneada']
   },
   {
-    id: 'galleta-chocolate',
+    id: 'galleta-pistacho-limon',
     category: 'galletas',
-    name: 'Galleta Doble Chocolate',
-    price: 8000,
-    image: imgGalleta3,
-    description: 'Para los amantes del cacao: masa de chocolate oscuro con chispas de chocolate fundente.',
-    tags: ['Galleta Artesanal', 'Chocolate']
-  },
-  {
-    id: 'galleta-red-velvet',
-    category: 'galletas',
-    name: 'Galleta Red Velvet',
-    price: 8000,
+    name: 'Galleta Pistacho Limón',
+    price: 12000,
     badge: 'Especial',
     image: imgGalletaRoja,
-    description: 'Color escarlata aterciopelado con gotas de chocolate blanco cremoso.',
-    tags: ['Galleta Artesanal', 'Red Velvet']
+    secondaryImage: imgGalletasVariadas2,
+    description: 'Galleta artesanal con pistachos tostados y toque cítrico de limón.',
+    tags: ['Galleta Artesanal', 'Pistacho', 'Especial']
   },
   {
-    id: 'galleta-mantequilla-mani',
+    id: 'brownie-clasico',
     category: 'galletas',
-    name: 'Galleta de Mantequilla de Maní',
-    price: 8000,
-    image: imgCookie,
-    description: 'Rica en textura y sabor a cacahuate tostado con un toque sutil de sal marina.',
-    tags: ['Galleta Artesanal', 'Maní']
-  },
-  {
-    id: 'galleta-nucita',
-    category: 'galletas',
-    name: 'Galleta Nucita & Klim',
-    price: 8000,
-    image: imgGalletaKlim,
-    description: 'Rellena con suave crema Nucita avellana y leche, inspirada en los sabores de siempre.',
-    tags: ['Galleta Artesanal', 'Nucita']
-  },
-  {
-    id: 'galleta-nutella',
-    category: 'galletas',
-    name: 'Galleta Nutella',
-    price: 8000,
-    badge: 'Favorita',
+    name: 'Brownie Clásico',
+    price: 10000,
     image: imgGalleta3,
-    secondaryImage: imgGalletasVarioas2,
-    description: 'Centro derretido cargado de avellanas y chocolate Nutella.',
-    tags: ['Galleta Artesanal', 'Nutella']
+    description: 'Brownie húmedo y denso de chocolate con centro fundente.',
+    tags: ['Brownie', 'Chocolate']
   },
   {
-    id: 'galleta-oreo',
+    id: 'brookie',
     category: 'galletas',
-    name: 'Galleta Oreo Cookies & Cream',
-    price: 8000,
-    image: imgGalletasVariadas2,
-    description: 'Trozos crujientes de Oreo integrados en masa de galleta horneada al punto.',
-    tags: ['Galleta Artesanal', 'Oreo']
+    name: 'Brookie',
+    price: 12000,
+    badge: 'Especial',
+    image: imgGalletasVarioas2,
+    description: 'La combinación perfecta entre brownie y cookie en una sola pieza irresistible.',
+    tags: ['Brownie', 'Cookie', 'Especial']
   },
 
   // --- PANADERÍA ---
   {
-    id: 'pan-rollo-sabores',
-    category: 'panaderia',
-    subCategory: 'Panes de Rollo',
-    name: 'Pan de Rollo Relleno ($5.000 c/u)',
-    price: 5000,
-    badge: '$5.000 c/u',
-    image: imgPanChocha,
-    secondaryImage: imgPanChocha2,
-    description: 'Masa suave y esponjosa enrollada con tu relleno preferido: Ajo, Pesto, Pepperoni, Canela, Mantequilla de Maní, o Dulce de Guayaba y Queso.',
-    tags: ['Panadería Fresca', 'Salado / Dulce', 'Recién Horneado']
-  },
-  {
     id: 'pan-alinado',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
-    name: 'Pan Aliñado Completo',
-    price: 14000,
+    name: 'Pan Aliñado',
+    price: 15000,
     image: imgPanChocha3,
     description: 'Pan tradicional suave y aromatizado con el auténtico sazón de la panadería de antaño.',
     tags: ['Pan Entero']
@@ -1309,7 +972,6 @@ export const menuItems = [
   {
     id: 'pan-integral',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
     name: 'Pan Integral',
     price: 15000,
     image: imgPanChocha4,
@@ -1319,21 +981,29 @@ export const menuItems = [
   {
     id: 'pan-focaccia',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
-    name: 'Focaccia Artesanal',
-    price: 16000,
+    name: 'Focaccia Personal',
+    price: 8000,
     badge: 'Italiano',
     image: imgDesayunoCaprese,
     secondaryImage: imgPanChocha,
-    description: 'Pan italiano de masa madre con aceite de oliva extra virgen, romero fresco y sal marina.',
-    tags: ['Pan Entero', 'Aceite de Oliva', 'Masa Madre']
+    description: 'Pan italiano personal con aceite de oliva extra virgen, romero fresco y sal marina.',
+    tags: ['Pan Personal', 'Aceite de Oliva']
+  },
+  {
+    id: 'pan-chochita',
+    category: 'panaderia',
+    name: 'Pan Chochita',
+    price: 6000,
+    image: imgPanChocha,
+    secondaryImage: imgPanChocha2,
+    description: 'Pan suave y esponjoso ideal para acompañar tus momentos.',
+    tags: ['Pan Artesanal']
   },
   {
     id: 'pan-ciabatta',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
-    name: 'Pan Ciabatta',
-    price: 6000,
+    name: 'Ciabatta',
+    price: 5000,
     image: imgPanChocha2,
     description: 'Corteza bien crujiente y miga aireada y elástica, ideal para bruschettas y bocadillos.',
     tags: ['Pan Artesanal']
@@ -1341,22 +1011,69 @@ export const menuItems = [
   {
     id: 'pan-engordacion',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
-    name: 'Pan "La Engordación"',
-    price: 16000,
+    name: 'Pan La Engordación',
+    price: 18000,
     badge: 'Especialidad',
     image: imgPanChocha4,
     description: 'Nuestra creación estrella cargada de queso derretido, mantequilla y sabor sin remordimientos.',
     tags: ['Pan Entero', 'Generoso', 'Quesudo']
   },
   {
-    id: 'pan-grissinis',
+    id: 'pan-masa-madre',
     category: 'panaderia',
-    subCategory: 'Panes Artesanales',
-    name: 'Grissinis Crujientes',
-    price: 3000,
+    name: 'Pan Masa Madre',
+    price: 20000,
+    badge: 'Artesanal',
     image: imgPanChocha3,
-    description: 'Bastoncitos de pan crocantes horneados, perfectos para acompañar cafés, salsas o dips.',
-    tags: ['Snack']
+    description: 'Pan de fermentación lenta con masa madre, corteza crujiente y miga alveolada.',
+    tags: ['Pan Entero', 'Masa Madre', 'Artesanal']
+  },
+  {
+    id: 'pan-brioche',
+    category: 'panaderia',
+    name: 'Pan Brioche',
+    price: 18000,
+    image: imgPanChocha4,
+    description: 'Pan enriquecido con mantequilla y huevos, suave como ningún otro.',
+    tags: ['Pan Entero', 'Mantequilla']
+  },
+  {
+    id: 'pan-rollo-ajo',
+    category: 'panaderia',
+    name: 'Pan de Rollo Ajo',
+    price: 8400,
+    image: imgPanChocha,
+    secondaryImage: imgPanChocha2,
+    description: 'Pan de rollo relleno de mantequilla de ajo artesanal, crujiente y aromático.',
+    tags: ['Pan de Rollo', 'Ajo']
+  },
+  {
+    id: 'pan-rollo-pesto-pepperoni-canela',
+    category: 'panaderia',
+    name: 'Pan de Rollo (Pesto / Pepperoni / Canela)',
+    price: 6700,
+    image: imgPanChocha,
+    description: 'Elige entre pesto artesanal, pepperoni o canela dulce.',
+    tags: ['Pan de Rollo', 'A Elección']
+  },
+  {
+    id: 'pan-rollo-chimichurri-pimenton',
+    category: 'panaderia',
+    name: 'Pan de Rollo (Chimichurri / Pimentón Dulce)',
+    price: 6600,
+    image: imgPanChocha2,
+    description: 'Pan de rollo con chimichurri de la casa o pimentón dulce confitado.',
+    tags: ['Pan de Rollo', 'A Elección']
+  },
+  {
+    id: 'pan-rollo-nutella',
+    category: 'panaderia',
+    name: 'Pan de Rollo Nutella',
+    price: 6750,
+    badge: 'Dulce',
+    image: imgPanChocha,
+    description: 'Pan de rollo generosamente relleno de Nutella cremosa.',
+    tags: ['Pan de Rollo', 'Nutella', 'Dulce']
   }
 ];
+

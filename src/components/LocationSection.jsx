@@ -50,7 +50,7 @@ export default function LocationSection() {
                 <h3 className="info-title">Horarios de Atención</h3>
                 <p className="info-text">
                   <strong>Lunes a Viernes:</strong> 8:00 am – 6:00 pm<br />
-                  <strong>Sábados:</strong> 8:00 am – 1:00 pm<br />
+                  <strong>Sábados:</strong> 8:00 am – 8:00 pm<br />
                   <strong>Domingos y Festivos:</strong> Cerrado
                 </p>
               </div>

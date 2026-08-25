@@ -253,7 +253,7 @@ a {
 .links-main {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: left;
 }
 
 .hero-subtitle {
@@ -457,9 +457,19 @@ a {
     position: relative;
     width: 60%;
     padding-right: 4rem;
-    margin-left: 20px;
-    margin-top: 100px;
+    margin-left: 0px;
+    margin-top: 150px;
   }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-desc {
+    width: 70%;
+  }
+
+
 
   .nav-links {
     gap: 1rem
